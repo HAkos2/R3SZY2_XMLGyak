@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<mozi>
+    <film id="txn_nxm_2jb" mufaj="horror">
+        <szinesz>
+            <gyerek>Janos</gyerek>
+            <musical>Istvan</musical>
+            <szinkron>Bela</szinkron>
+        </szinesz>
+        <rendezo id="nzk_4xm_2jb" nev="alex"/>
+        <iro id="trv_4xm_2jb"/>
+        <producer id="asd_123">Karoly</producer>
+        <dramaturg id="dfg_224">Erzsebet</dramaturg>
+        <operator id="jld_567">abc</operator>
+    </film>
+</mozi>
