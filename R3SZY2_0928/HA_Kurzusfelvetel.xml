@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE HA_kurzusfelvetel SYSTEM "HA_kurzusfelvetel.dtd">
+
+<HA_kurzusfelvetel tanev="2022_2023 I." egyetem="ME">
+    <hallgato id="R3SZY2.ME">
+        <hnev>Horvath Akos</hnev>
+        <szulev>2001-09-05</szulev>
+        <szak evf="5">Programtervezo informatikus</szak>
+    </hallgato>
+
+    <kurzusok>
+        <kurzus id="GEIAL332-B">
+            <kurzusnev>Adatkezeles XML kornyezetben</kurzusnev>
+            <kredit>5</kredit>
+            <hely>XXXII.</hely>
+            <idopont>Kedd 12:00-13:30</idopont>
+            <oktato>Dr. Bednarik Laszlo</oktato>
+        </kurzus>
+        <kurzus id="GEIAK130-B">
+            <kurzusnev>Mesterseges intelligencia alapok</kurzusnev>
+            <kredit>5</kredit>
+            <hely>I.</hely>
+            <idopont>Kedd 9:00-11:15</idopont>
+            <oktato>Kunne Dr. Tamas Judit</oktato>
+        </kurzus>
+        <kurzus id="GEIAL331-B">
+            <kurzusnev>Web technologiak I.</kurzusnev>
+            <kredit>5</kredit>
+            <hely>XXX.</hely>
+            <idopont>Hetfo 8:00-10:00</idopont>
+            <oktato>Agardi Anita</oktato>
+        </kurzus>
+        <kurzus id="GEMAK234-B">
+            <kurzusnev>Algoritmusok es vizsgalatuk</kurzusnev>
+            <kredit>5</kredit>
+            <hely>X.</hely>
+            <idopont>Hetfo 8:00-10:00</idopont>
+            <oktato>Dr. Hazy Attila</oktato>
+        </kurzus>
+        <kurzus id="GEIAL315-B">
+            <kurzusnev>Vallalati informacios rendszerek fejlesztese</kurzusnev>
+            <kredit>5</kredit>
+            <hely>In/103</hely>
+            <idopont>Szerda 16:00-18:00</idopont>
+            <oktato>Dr. Sasvari Peter</oktato>
+        </kurzus>
+    </kurzusok>
+</HA_kurzusfelvetel>

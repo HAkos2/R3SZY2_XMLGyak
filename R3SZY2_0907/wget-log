@@ -1,21 +1,0 @@
---2022-09-15 23:17:25--  https://www.google.com/imgres?imgurl=https%3A%2F%2Fthumbs.dreamstime.com%2Fb%2Fsql-database-icon-logo-design-ui-ux-app-orange-inscription-shadow-96841969.jpg
-Loaded CA certificate '/etc/ssl/certs/ca-certificates.crt'
-Resolving www.google.com (www.google.com)... 142.250.180.228, 2a00:1450:400d:807::2004
-Connecting to www.google.com (www.google.com)|142.250.180.228|:443... connected.
-HTTP request sent, awaiting response... 301 Moved Permanently
-Location: https://www.google.com/imghp [following]
---2022-09-15 23:17:25--  https://www.google.com/imghp
-Reusing existing connection to www.google.com:443.
-HTTP request sent, awaiting response... 302 Found
-Location: https://consent.google.com/ml?continue=https://www.google.com/imghp&gl=HU&m=0&pc=ihp&uxe=none&hl=hu&src=1 [following]
---2022-09-15 23:17:26--  https://consent.google.com/ml?continue=https://www.google.com/imghp&gl=HU&m=0&pc=ihp&uxe=none&hl=hu&src=1
-Resolving consent.google.com (consent.google.com)... 142.251.39.14, 2a00:1450:400d:807::200e
-Connecting to consent.google.com (consent.google.com)|142.251.39.14|:443... connected.
-HTTP request sent, awaiting response... 200 OK
-Length: unspecified [text/html]
-Saving to: ‘imgres?imgurl=https:%2F%2Fthumbs.dreamstime.com%2Fb%2Fsql-database-icon-logo-design-ui-ux-app-orange-inscription-shadow-96841969.jpg’
-
-          imgres?im     [<=>              ]       0  --.-KB/s               imgres?imgurl=https     [ <=>             ]  13.99K  --.-KB/s    in 0.001s  
-
-2022-09-15 23:17:26 (18.8 MB/s) - ‘imgres?imgurl=https:%2F%2Fthumbs.dreamstime.com%2Fb%2Fsql-database-icon-logo-design-ui-ux-app-orange-inscription-shadow-96841969.jpg’ saved [14324]
-
