@@ -32,13 +32,14 @@ public class DomReadR3SZY2 {
                 Node node1 = elem.getElementsByTagName("firstname").item(0);
                 String fname = node1.getTextContent();
                 Node node2 = elem.getElementsByTagName("lastname").item(0);
-                String lname = node1.getTextContent();
+                String lname = node2.getTextContent();
                 Node node3 = elem.getElementsByTagName("profession").item(0);
-                String profession = node1.getTextContent();
+                String profession = node3.getTextContent();
 
-                System.out.println();
-                System.out.println();
-                System.out.println();
+                System.out.println("id: " + id);
+                System.out.println("firstname: " + fname);
+                System.out.println("lastname: " + lname);
+                System.out.println("profession: " + profession);
             }
         }
     }
