@@ -1,0 +1,145 @@
+<!-- Keszitette: Horvath Akos R3SZY2 -->
+
+<?xml version="1.0" encoding="UTF-8"?>
+<bank>
+
+    <!-- Bankszamla peldanyai  -->
+    <bankszamla bszkod="1">
+        <szamlaszam>111-222-333</szamlaszam>
+        <egyenleg>120000</egyenleg>
+    </bankszamla>
+    <bankszamla bszkod="2">
+        <szamlaszam>444-555-777</szamlaszam>
+        <egyenleg>35001</egyenleg>
+    </bankszamla>
+    <bankszamla bszkod="3">
+        <szamlaszam>888-999-001</szamlaszam>
+        <egyenleg>200050</egyenleg>
+    </bankszamla>
+
+    <!-- Szamlatulajdonos peldanyai  -->
+    <szamlatulajdonos sztkod="1">
+        <nev>Kiss István</nev> 
+        <szuldatum>1980-5-11</szuldatum>
+        <lakcim>
+            <irsz>1033</irsz>
+            <varos>Budapest</varos>
+            <utca>Petőfi utca</utca>
+            <hazszam>1</hazszam>
+        </lakcim>
+        <telefonszam>062011223344</telefonszam>
+        <telefonszam>062011225566</telefonszam>
+    </szamlatulajdonos>
+    <szamlatulajdonos sztkod="2">
+        <nev>Nagy Béla</nev> 
+        <szuldatum>1990-7-20</szuldatum>
+        <lakcim>
+            <irsz>3525</irsz>
+            <varos>Miskolc</varos>
+            <utca>Fa utca</utca>
+            <hazszam>15</hazszam>
+        </lakcim>
+        <telefonszam>0630333222111</telefonszam>
+    </szamlatulajdonos>
+    <szamlatulajdonos sztkod="3">
+        <nev>Kovács Erzsébet</nev> 
+        <szuldatum>1975-1-15</szuldatum>
+        <lakcim>
+            <irsz>4000</irsz>
+            <varos>Debrecen</varos>
+            <utca>Erzsébet utca</utca>
+            <hazszam>3</hazszam>
+        </lakcim>
+        <telefonszam>0670333444555</telefonszam>
+    </szamlatulajdonos>
+
+    <!-- Tulajdonos, a Bankszamla es Szamlatulajdonos
+         egyedeket osszekoto egyed peldanyai  -->
+    <tulajdonos bsz_fk="1" szt_fk="2"/>
+    <tulajdonos bsz_fk="3" szt_fk="1"/>
+    <tulajdonos bsz_fk="2" szt_fk="3"/>
+
+    <!-- Bankkartya peldanyai  -->
+    <bankkartya bkkod="1" bsz_fk="2">
+        <kartyaszam>1111-2222-3333-4444</kartyaszam> 
+        <lejarati_datum>2024-11-01</lejarati_datum>
+        <cvv>111</cvv>
+    </bankkartya>
+    <bankkartya bkkod="2" bsz_fk="3">
+        <kartyaszam>5555-4444-3333-2222</kartyaszam> 
+        <lejarati_datum>2025-03-01</lejarati_datum>
+        <cvv>222</cvv>
+    </bankkartya>
+    <bankkartya bkkod="3" bsz_fk="1">
+        <kartyaszam>1234-5678-9012</kartyaszam> 
+        <lejarati_datum>2023-08-01</lejarati_datum>
+        <cvv>333</cvv>
+    </bankkartya>
+
+    <!-- Tranzakcio peldanyai  -->
+    <tranzakcio tkod="1" bsz_fk="3">
+        <kuldo_sz>888-999-001</kuldo_sz>
+        <fogado_sz>111-222-333</fogado_sz>
+        <osszeg>15000</osszeg>
+        <datum>2022-09-23</datum>
+    </tranzakcio>
+    <tranzakcio tkod="2" bsz_fk="2">
+        <kuldo_sz>444-555-777</kuldo_sz>
+        <fogado_sz>888-999-001</fogado_sz>
+        <osszeg>32500</osszeg>
+        <datum>2022-07-16</datum>
+    </tranzakcio>
+    <tranzakcio tkod="3" bsz_fk="1">
+        <kuldo_sz>111-222-333</kuldo_sz>
+        <fogado_sz>444-555-777</fogado_sz>
+        <osszeg>8900</osszeg>
+        <datum>2022-11-04</datum>
+    </tranzakcio>
+
+    <!-- Bankfiok peldanyai  -->
+    <bankfiok bfkod="1">
+        <cim>
+            <irsz>1234</irsz>
+            <varos>Budapest</varos>
+            <utca>Pest utca</utca>
+            <hazszam>12</hazszam>
+        </cim>
+    </bankfiok>
+    <bankfiok bfkod="2">
+        <cim>
+            <irsz>3500</irsz>
+            <varos>Miskolc</varos>
+            <utca>Miskolc utca</utca>
+            <hazszam>25</hazszam>
+        </cim>
+    </bankfiok>
+    <bankfiok bfkod="3">
+        <cim>
+            <irsz>4001</irsz>
+            <varos>Debrecen</varos>
+            <utca>Alma utca</utca>
+            <hazszam>3</hazszam>
+        </cim>
+    </bankfiok>
+    
+    <!-- Munkavallalo peldanyai  -->
+    <munkavallalo mvkod="1" bf_fk="2">
+        <nev>Lantos Ferenc</nev>
+        <telefonszam>0620123456123</telefonszam>
+        <fizetes>250000</fizetes>
+        <pozicio>Ügyfélszolgálat</pozicio>
+    </munkavallalo>
+    <munkavallalo mvkod="2" bf_fk="1">
+        <nev>Tóth Gyula</nev>
+        <telefonszam>0630777888999</telefonszam>
+        <fizetes>200000</fizetes>
+        <pozicio>Biztonsági őr</pozicio>
+    </munkavallalo>
+    <munkavallalo mvkod="3" bf_fk="3">
+        <nev>Nagy István</nev>
+        <telefonszam>0670999888777</telefonszam>
+        <fizetes>270000</fizetes>
+        <pozicio>Ügyfélszolgálat</pozicio>
+    </munkavallalo>
+
+</bank>

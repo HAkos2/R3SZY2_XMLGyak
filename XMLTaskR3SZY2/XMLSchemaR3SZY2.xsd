@@ -1,0 +1,91 @@
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="bank" type="bankType"/>
+
+  <xs:complexType name="bankszamlaType">
+    <xs:sequence>
+      <xs:element type="xs:string" name="szamlaszam"/>
+      <xs:element type="xs:float" name="egyenleg"/>
+    </xs:sequence>
+    <xs:attribute type="xs:int" name="bszkod" use="required"/>
+  </xs:complexType>
+
+  <xs:complexType name="lakcimType">
+    <xs:sequence>
+      <xs:element type="xs:string" name="irsz"/>
+      <xs:element type="xs:string" name="varos"/>
+      <xs:element type="xs:string" name="utca"/>
+      <xs:element type="xs:unsignedShort" name="hazszam"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="szamlatulajdonosType">
+    <xs:sequence>
+      <xs:element type="xs:string" name="nev"/>
+      <xs:element type="xs:string" name="szuldatum"/>
+      <xs:element type="lakcimType" name="lakcim"/>
+      <xs:element type="xs:long" name="telefonszam"/>
+    </xs:sequence>
+    <xs:attribute type="xs:int" name="sztkod" use="required"/>
+  </xs:complexType>
+
+  <xs:complexType name="tulajdonosType">
+    <xs:simpleContent>
+      <xs:extension base="xs:string">
+        <xs:attribute type="xs:int" name="bsz_fk" use="required"/>
+        <xs:attribute type="xs:int" name="szt_fk" use="required"/>
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+
+  <xs:complexType name="bankkartyaType">
+    <xs:sequence>
+      <xs:element type="xs:string" name="kartyaszam"/>
+      <xs:element type="xs:date" name="lejarati_datum"/>
+      <xs:element type="xs:string" name="cvv"/>
+    </xs:sequence>
+    <xs:attribute type="xs:int" name="bkkod" use="required"/>
+    <xs:attribute type="xs:int" name="bsz_fk" use="required"/>
+  </xs:complexType>
+
+  <xs:complexType name="tranzakcioType">
+    <xs:sequence>
+      <xs:element type="xs:string" name="kuldo_sz"/>
+      <xs:element type="xs:string" name="fogado_sz"/>
+      <xs:element type="xs:int" name="osszeg"/>
+      <xs:element type="xs:date" name="datum"/>
+    </xs:sequence>
+    <xs:attribute type="xs:int" name="tkod" use="required"/>
+    <xs:attribute type="xs:int" name="bsz_fk" use="required"/>
+  </xs:complexType>
+
+  <xs:complexType name="bankfiokType">
+    <xs:sequence>
+      <xs:element type="lakcimType" name="cim"/>
+    </xs:sequence>
+    <xs:attribute type="xs:int" name="bfkod" use="required"/>
+  </xs:complexType>
+
+  <xs:complexType name="munkavallaloType">
+    <xs:sequence>
+      <xs:element type="xs:string" name="nev"/>
+      <xs:element type="xs:string" name="telefonszam"/>
+      <xs:element type="xs:float" name="fizetes"/>
+      <xs:element type="xs:string" name="pozicio"/>
+    </xs:sequence>
+    <xs:attribute type="xs:int" name="mvkod" use="required"/>
+    <xs:attribute type="xs:int" name="bf_fk" use="required"/>
+  </xs:complexType>
+
+  <xs:complexType name="bankType">
+    <xs:sequence>
+      <xs:element type="bankszamlaType" name="bankszamla" maxOccurs="unbounded" minOccurs="0"/>
+      <xs:element type="szamlatulajdonosType" name="szamlatulajdonos" maxOccurs="unbounded" minOccurs="0"/>
+      <xs:element type="tulajdonosType" name="tulajdonos" maxOccurs="unbounded" minOccurs="0"/>
+      <xs:element type="bankkartyaType" name="bankkartya" maxOccurs="unbounded" minOccurs="0"/>
+      <xs:element type="tranzakcioType" name="tranzakcio" maxOccurs="unbounded" minOccurs="0"/>
+      <xs:element type="bankfiokType" name="bankfiok" maxOccurs="unbounded" minOccurs="0"/>
+      <xs:element type="munkavallaloType" name="munkavallalo" maxOccurs="unbounded" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+</xs:schema>
