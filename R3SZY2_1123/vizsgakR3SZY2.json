@@ -1,0 +1,40 @@
+{ 
+    "_id": "R3SZY2",
+    "vizsgak":{
+        "vizsga": [
+            {
+            "kurzus": "Matematikai logika és alkalmazásai",
+            "helyszin": "T042",
+            "idopont":{
+                "nap": "06.23.",
+                "tol": 14,
+                "ig": 16
+            },
+            "oktato": "Dr. Kertész Dávid Csaba",
+            "jegy": 4
+        },
+        {
+            "kurzus": "Számítógépi grafika",
+            "helyszin": "II. előadó",
+            "idopont":{
+                "nap": "05.19.",
+                "tol": 10,
+                "ig": 12
+            },
+            "oktato": "Dr. Juhász Imre",
+            "jegy": 3
+        },
+        {
+            "kurzus": "Numerikus analízis",
+            "helyszin": "E 30",
+            "idopont":{
+                "nap": "06.07.",
+                "tol": 10,
+                "ig": 12
+            },
+            "oktato": "Dr. Karácsony Zsolt",
+            "jegy": 2
+        }
+        ]
+    }
+}

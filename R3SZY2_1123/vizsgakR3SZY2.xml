@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<vizsgak_R3SZY2>
+    <vizsgak>
+        <vizsga>
+            <kurzus>Matematikai logika és alkalmazásai</kurzus>
+            <helyszin>T042</helyszin>
+            <idopont>
+                <nap>06.23.</nap>
+                <tol>14</tol>
+                <ig>16</ig>
+            </idopont>
+            <oktato>Dr. Kertész Dávid Csaba</oktato>
+            <jegy>4</jegy>
+        </vizsga>
+        <vizsga>
+            <kurzus>Számítógépi grafika</kurzus>
+            <helyszin>II. előadó</helyszin>
+            <idopont>
+                <nap>05.19.</nap>
+                <tol>10</tol>
+                <ig>12</ig>
+            </idopont>
+            <oktato>Dr. Juhász Imre</oktato>
+            <jegy>3</jegy>
+        </vizsga>
+        <vizsga>
+            <kurzus>Numerikus analízis</kurzus>
+            <helyszin>E 30</helyszin>
+            <idopont>
+                <nap>06.07.</nap>
+                <tol>10</tol>
+                <ig>12</ig>
+            </idopont>
+            <oktato>Dr. Karácsony Zsolt</oktato>
+            <jegy>2</jegy>
+        </vizsga>
+    </vizsgak>
+</vizsgak_R3SZY2>
