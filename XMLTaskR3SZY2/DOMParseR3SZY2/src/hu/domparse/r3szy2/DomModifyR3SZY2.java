@@ -10,6 +10,7 @@ import javax.xml.transform.TransformerFactory;
 import javax.xml.transform.dom.DOMSource;
 import javax.xml.transform.stream.StreamResult;
 import java.io.File;
+import java.io.FileWriter;
 import java.io.IOException;
 public class DomModifyR3SZY2 {
     public void modify(File file) throws ParserConfigurationException, TransformerException, IOException, SAXException {
@@ -69,5 +70,9 @@ public class DomModifyR3SZY2 {
         System.out.println("-- Modositott fajl --");
         StreamResult consoleResult = new StreamResult(System.out);
         transformer.transform(source, consoleResult);
+        
+        FileWriter writer = new FileWriter(new File("out.xml"));
+        StreamResult result = new StreamResult(writer);
+        transformer.transform(source, result);
     }
 }

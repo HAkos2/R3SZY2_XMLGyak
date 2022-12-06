@@ -1,5 +1,14 @@
 <xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
-  <xs:element name="bank" type="bankType"/>
+  <xs:element name="bank" type="bankType">
+    <xs:unique name="szamlaszamUnique">
+        <xs:selector xpath="bankszamla"/>
+        <xs:field xpath="szamlaszam"/>
+    </xs:unique>
+    <xs:unique name="kartyaszamUnique">
+        <xs:selector xpath="bankkartya"/>
+        <xs:field xpath="kartyaszam"/>
+    </xs:unique>
+  </xs:element>
 
   <xs:complexType name="bankszamlaType">
     <xs:sequence>
@@ -23,7 +32,7 @@
       <xs:element type="xs:string" name="nev"/>
       <xs:element type="xs:string" name="szuldatum"/>
       <xs:element type="lakcimType" name="lakcim"/>
-      <xs:element type="xs:long" name="telefonszam"/>
+      <xs:element type="xs:long" name="telefonszam" maxOccurs="unbounded"/>
     </xs:sequence>
     <xs:attribute type="xs:int" name="sztkod" use="required"/>
   </xs:complexType>
