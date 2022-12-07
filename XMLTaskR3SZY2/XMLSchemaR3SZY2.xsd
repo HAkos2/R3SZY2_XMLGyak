@@ -8,6 +8,39 @@
         <xs:selector xpath="bankkartya"/>
         <xs:field xpath="kartyaszam"/>
     </xs:unique>
+    <xs:key name="bankszamlaKey">
+      <xs:selector xpath="bankszamla"/>
+      <xs:field xpath="@bszkod"/>
+    </xs:key>
+    <xs:key name="szamlatulajdonosKey">
+      <xs:selector xpath="szamlatulajdonos"/>
+      <xs:field xpath="@sztkod"/>
+    </xs:key>
+    <xs:key name="bankfiokKey">
+      <xs:selector xpath="bankfiok"/>
+      <xs:field xpath="@bfkod"/>
+    </xs:key>
+
+    <xs:keyref name="tulajdonosBSZFK" refer="bankszamlaKey">
+      <xs:selector xpath="tulajdonos"/>
+      <xs:field xpath="@bsz_fk"/>
+    </xs:keyref>
+    <xs:keyref name="tulajdonosSZTFK" refer="szamlatulajdonosKey">
+      <xs:selector xpath="tulajdonos"/>
+      <xs:field xpath="@szt_fk"/>
+    </xs:keyref>
+    <xs:keyref name="bankkartyaFK" refer="bankszamlaKey">
+      <xs:selector xpath="bankkartya"/>
+      <xs:field xpath="@bsz_fk"/>
+    </xs:keyref>
+    <xs:keyref name="tranzakcioFK" refer="bankszamlaKey">
+      <xs:selector xpath="tranzakcio"/>
+      <xs:field xpath="@bsz_fk"/>
+    </xs:keyref>
+    <xs:keyref name="munkavallaloFK" refer="bankfiokKey">
+      <xs:selector xpath="munkavallalo"/>
+      <xs:field xpath="@bf_fk"/>
+    </xs:keyref>
   </xs:element>
 
   <xs:complexType name="bankszamlaType">

@@ -23,6 +23,8 @@ public class DomModifyR3SZY2 {
         NodeList bankszamla = doc.getElementsByTagName("bankszamla");
         Node root = doc.getFirstChild();
 
+
+        // elso bankszamla elem bszkod attributum modositasa
         NamedNodeMap attr = bankszamla.item(0).getAttributes();
         Node nodeAttr = attr.getNamedItem("bszkod");
         nodeAttr.setTextContent("01");
@@ -39,9 +41,11 @@ public class DomModifyR3SZY2 {
                     if ("egyenleg".equals(el.getNodeName())) {
                         Element parent = (Element) el.getParentNode();
 
+                    // "2" bszkodu bankszamla egyenlegenek modositasa
                         if ((parent.getAttribute("bszkod").equals("2"))) {
                             el.setTextContent("30000");
                         }
+                    // "3" bszkodu bankszamla egyenlegenek modositasa
                         if ((parent.getAttribute("bszkod").equals("3"))) {
                             el.setTextContent("195000");
                         }
@@ -50,18 +54,19 @@ public class DomModifyR3SZY2 {
             }
         }
 
+        // elso bankkartya elem kitorlese
         NodeList childNodes = root.getChildNodes();
 
         for (int i = 0; i < childNodes.getLength(); i++) {
             Node node = childNodes.item(i);
 
-            // delete first "bankkartya" node
             if ("bankkartya".equals(node.getNodeName())) {
                 root.removeChild(node);
                 break;
             }
         }
 
+        //kiiras konzolra, fajlba iras
         TransformerFactory tfactory = TransformerFactory.newInstance();
         Transformer transformer = tfactory.newTransformer();
 

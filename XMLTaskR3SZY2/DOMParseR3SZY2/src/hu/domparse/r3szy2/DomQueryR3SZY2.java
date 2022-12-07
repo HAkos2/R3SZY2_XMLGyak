@@ -28,6 +28,7 @@ public class DomQueryR3SZY2 {
         Document document = builder.parse(xmlFile);
         document.getDocumentElement().normalize();
 
+        // osszes elem kivalasztasa
         ArrayList<NodeList> nodeLists = new ArrayList<NodeList>();
         nodeLists.add(document.getElementsByTagName("bankszamla"));
         nodeLists.add(document.getElementsByTagName("szamlatulajdonos"));
@@ -44,7 +45,9 @@ public class DomQueryR3SZY2 {
                 Node node = nodeList.item(j);
                 if (node.getNodeType() == Node.ELEMENT_NODE) {
                     Element el = (Element) node;
+                    // parameterkent kapott string megkeresese
                     NodeList nodeList1  = el.getElementsByTagName(elementName);
+                    // ha megtalaltuk, kiiratasa a konzolra
                     if (nodeList1.getLength() > 0) {
                         System.out.println("found element \"" + elementName +
                                 "\": " + nodeList1.item(0).getTextContent());
@@ -53,6 +56,8 @@ public class DomQueryR3SZY2 {
                 }
             }
         }
+
+        // ha a lekerdezett string nevu elem nem talalhato
         if (!found) {
            System.out.println("did not find element \"" + elementName + "\"");
         }
