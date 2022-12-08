@@ -41,6 +41,10 @@
       <xs:selector xpath="munkavallalo"/>
       <xs:field xpath="@bf_fk"/>
     </xs:keyref>
+    <xs:unique name="bankkartyaFKUnique">
+        <xs:selector xpath="bankkartya"/>
+        <xs:field xpath="@bsz_fk"/>
+    </xs:unique>
   </xs:element>
 
   <xs:complexType name="bankszamlaType">
